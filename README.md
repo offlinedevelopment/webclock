@@ -1,2 +1,2 @@
 # webclock
-Scalable web clock
+Offline scalable web clock that fits the browser window.
