@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html manifest="clock.appcache">
+<head>
+<meta name="description" content="Web Clock">
+<meta name="author" content="David Fuselier ilavayou@gmail.com">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="clock.png" />
+<title>Web Clock</title>
+<style>
+#line1 {font-size:11vw; text-align:center; font-family:Arial, Helvetica, sans-serif;}
+#line2 {font-size:24vw; text-align:center; font-family:Arial, Helvetica, sans-serif;} 
+#line3 {font-size:10vw; text-align:center; font-family:Arial, Helvetica, sans-serif;} 
+body {background-color: orange; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
+div  {margin-top: -1px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
+</style>
+<script>
+var myVar = setInterval(function(){clockTime()},1000);
+var colorindex=0;
+var fg1=new Array ('black','black','#353535','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg1=new Array ('white','white','#809070','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+var fg2=new Array ('black','red',  '#353535','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg2=new Array ('white','white','#809070','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+var fg3=new Array ('black','black','#353535','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg3=new Array ('white','white','#809070','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+
+function clockTime()
+{
+var ampm= new Array ('AM','AM','AM','AM','AM','AM','AM','AM','AM','AM','AM','AM','PM','PM','PM','PM','PM','PM','PM','PM','PM','PM','PM','PM');
+var time= new Array ('12','1','2','3','4','5','6','7','8','9','10','11','12','1','2','3','4','5','6','7','8','9','10','11');
+var today=new Date();
+var datestr=new Date().toDateString();
+var todayarray=today.toString().split(" ");
+var tm=todayarray[4];
+var gt=todayarray[5];
+var tz=today.toString().split("(");
+var hour=today.getHours();
+var min=today.getMinutes();
+if (min < 10) {min = "0"+min};
+//write data to 3 div lines
+document.getElementById('line1').innerHTML=datestr;
+document.getElementById('line2').innerHTML=tm;
+document.getElementById('line3').innerHTML=time[hour]+":"+min+" "+ampm[hour]+" "+"("+tz[1];
+//t=setTimeout(function(){clockTime()},500);
+}
+function changecolor()
+{
+  document.getElementById("line1").style.color=fg1[colorindex];
+  document.getElementById("line1").style.backgroundColor=bg1[colorindex];
+  document.getElementById("line2").style.color=fg2[colorindex];
+  document.getElementById("line2").style.backgroundColor=bg2[colorindex];
+  document.getElementById("line3").style.color=fg3[colorindex];
+  document.getElementById("line3").style.backgroundColor=bg3[colorindex];
+  document.body.style.background = bg3[colorindex];;
+  colorindex=colorindex+1;
+  if (colorindex >= fg1.length) {colorindex=0;}
+}
+</script>
+</head>
+
+<body onload="changecolor();">
+<div id="line1" onclick="changecolor();"> </div>
+<div id="line2" onclick="changecolor();"> </div>
+<div id="line3" onclick="changecolor();"> </div>
+</body>
+</html>
