@@ -7,8 +7,9 @@
 <link rel="apple-touch-icon" href="clock.png" />
 <title>Web Clock</title>
 <style>
-#line1 {font-size:10vw; height:5vh; text-align:center; font-family:arial black, Arial, Helvetica, sans-serif;}
-#line2 {font-size:20vw; height:18vh; text-align:center; font-family:arial black, Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+#line1 {font-size:10vw; vertical-align: top; text-align:center; font-family:arial black, Arial, Helvetica, sans-serif;}
+#line2 {font-size:20vw; line-height:95%; vertical-align: top; text-align:center; font-family:arial black, Arial, Helvetica, sans-serif;}
 #line3 {font-size:10vw; text-align:center; font-family:arial black, Arial, Helvetica, sans-serif;}
 body {margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
 div  {margin-top: -1px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
@@ -16,12 +17,12 @@ div  {margin-top: -1px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;
 <script>
 var myVar = setInterval(function(){clockTime()},1000);
 var colorindex=0;
-var fg1=new Array ('#15182d','#353535','black','black','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
-var bg1=new Array ('#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
-var fg2=new Array ('#15182d','#353535','black','red','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
-var bg2=new Array ('#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
-var fg3=new Array ('#15182d','#353535','black','black','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
-var bg3=new Array ('#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+var fg1=new Array ('#15182d','#353535','#353535','black','black','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg1=new Array ('#d1d4c2','#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+var fg2=new Array ('#15182d','#dc322f','#353535','black','red','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg2=new Array ('#d1d4c2','#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
+var fg3=new Array ('#15182d','#15182d','#353535','black','black','#8AD3B0','#FF0000','#000000','#DEBA84','#3F3F3E','#00C8F7');
+var bg3=new Array ('#d1d4c2','#d1d4c2','#809070','white','white','#1E2A1F','#4A4A4A','#7BA504','#383838','#282828','#2E2E30');
 
 function clockTime()
 {

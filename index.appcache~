@@ -1,4 +1,6 @@
 CACHE MANIFEST
 # V1.1
 index.html
-Network *
+NETWORK:
+*
+
