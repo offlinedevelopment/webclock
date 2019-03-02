@@ -23,17 +23,15 @@ div  {margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;}
 <div id="line1" onclick="changecolor();"> </div>
 <div id="line2" onclick="changecolor();"> </div>
 <div id="line3" onclick="changecolor();"> </div>
-<div id="line4" onclick="changecolor();"><canvas id="canvas" width="100" height="100" style="background-color:#333"></canvas></div>
+<div id="line4" onclick="changecolor();"><canvas id="canvas" width="300" height="300" style="background-color:#333"></canvas></div>
 </body>
 
 <script>
 var myVar = setInterval(function(){digitalclockTime()},1000);
 var colorindex=0;
 
-// Analog clock from W3schools
 var canvas = document.getElementById("canvas");
-//var ctx = canvas.getContext("2d");
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 var radius = canvas.height / 2;
 ctx.translate(radius, radius);
 radius = radius * 0.90
@@ -67,17 +65,17 @@ function drawFace(ctx, radius) {
 function drawNumbers(ctx, radius) {
   var ang;
   var num;
-  ctx.font = radius*0.30 + "px arial";
+  ctx.font = radius*0.25 + "px arial";
   ctx.textBaseline="middle";
   ctx.textAlign="center";
   for(num = 1; num < 13; num++){
     ang = num * Math.PI / 6;
     ctx.rotate(ang);
-    ctx.translate(0, -radius*0.75);
+    ctx.translate(0, -radius*0.85);
     ctx.rotate(-ang);
     ctx.fillText(num.toString(), 0, 0);
     ctx.rotate(ang);
-    ctx.translate(0, radius*0.75);
+    ctx.translate(0, radius*0.85);
     ctx.rotate(-ang);
   }
 }
