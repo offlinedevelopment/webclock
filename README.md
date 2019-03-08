@@ -1,4 +1,3 @@
 # webclock
-Offline scalable web clock that fits the browser window.
-Click on the screen to change the color scheme.
-Analog clock is included.
+Offline scalable digital and analog web clock that fits the browser window.
+Click on the digital clock to change the color scheme.
