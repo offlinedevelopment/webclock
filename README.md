@@ -10,7 +10,9 @@ Offline development web applications are:
 - No malware
 - No exploits
 - No adware
+
 Hosted on [GitHub Pages](https://offlinedevelopment.github.io/webclock/#).
+
 <p align="center">
   <img src="https://offlinedevelopment.github.io/webclock/webclock.png">
 </p>
