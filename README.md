@@ -13,8 +13,7 @@ Offline development web applications are:
 - No malware
 - No exploits
 - No adware
-
-
+---
 <p align="center">
   <img src="https://offlinedevelopment.github.io/webclock/webclock.png">
 </p>
