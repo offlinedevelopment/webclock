@@ -1,5 +1,5 @@
 # Web Clock
-Scalable digital and analog clock web application that fits the browser window. Click on the digital clock to change the color scheme. 
+Digital and analog clock web application that scales to fit the browser window. Click on the digital clock to change the color scheme. 
 
 Hosted on [GitHub Pages](https://offlinedevelopment.github.io/webclock/#).
 
